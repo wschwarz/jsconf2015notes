@@ -1,0 +1,72 @@
+Altering the Real World in JS
+
+Friday (5:00pm - Track A)
+
+We can take our code out of the computer into the real world (ex: controlling LEDs)
+
+Javascript is going to lead this process.
+
+----Demo----GIFs----
+
+Computer generated music - algo raves - live coding dj
+javascript env for algo ravers - online IDE
+
+Gibber
+	a = Drums('x*o*x*o-')
+	a.pitch = 0.5
+	// vocoding
+	speak = Speak({ pitch: 70, wordgap: 5 })
+		.say.seq( ['J', 'S', 'Conf'], [1/4, 1/4, 1/4, 1/2].rnd())
+
+	speak.pitch.seq([1,.8,1.2])...
+
+a lot of sensors since mobile phones have a lot of sensors and everybody has phones
+
+http://192.168.157.18:9321 (js)
+
+phones -> io -> gibber
+
+a.pitch = phone.x
+
+https://github.com/janjongboom/jsconf-us/blob/master/gibber/gibber-phone.js
+
+bluetooth beacons - broadcasting their existence | long battery life, cheap, urls, sensor values, etc.
+	coming to a web browser bugzilla url
+
+scanning for beacons
+var adapter = navigator.mozBluetooth.defaultAdapter
+adapter.startLeScan([]).then(function() {}); adapter.stopLeScan(handle)
+get ids from bluetooth
+
+JS baby monitor
+	tag your baby with a phone
+	get three beacons
+	some math
+
+http://janos.io
+
+use signal strength for distance
+
+phone music demo - change the speed of gifs - kinda crashed since there were too many connectors
+
+combine demos to listen to baby generated music
+
+Wearables
+	augmented reality
+	hyperlocal services
+	open standards
+
+mozilla glass -
+	works with any glasses
+	no extra device
+	voice controlled
+	self build kit ~$300
+	webRTC connects camera and display & sensors / mirror - Augmented Reality
+
+@janjongboom
+
+github.com/janjongboom/jsconf-us
+
+
+
+

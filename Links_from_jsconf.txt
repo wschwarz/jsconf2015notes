@@ -1,0 +1,20 @@
+links gathered during talks and mentioned during talks
+
+https://github.com/mdb/polymer-testing-box/blob/master/Vagrantfile
+http://www.x.org/archive/X11R7.6/doc/man/man1/Xvfb.1.xhtml#heading5
+http://2015.jsconf.us/schedule.html
+https://github.com/tgriesser/knex
+http://knexjs.org/
+https://gist.github.com/wincent/598fa75e22bdfa44cf47
+https://speakerdeck.com/tgriesser/making-relational-cool-again-or-javascript-on-acid
+http://www.instructables.com/files/orig/FN1/YEKZ/HN824U1E/FN1YEKZHN824U1E.jpg
+http://www.electronicoscaldas.com/datasheet/MG90S_Tower-Pro.pdf
+https://noderockets.firebaseio.com/pi-ip.json
+https://developer.yummly.com/
+https://github.com/noderockets/noderocket-rocket/tree/jsconf2015
+https://speakerdeck.com/laneyk/mutations-in-relay
+http://backbonejs.org/#Collection-extend
+https://github.com/paypal/nemo
+http://codewinds.com/blog/2015-05-29-jsconf-reactjs.html
+http://stevekinney.github.io/face-theremin/
+https://github.com/una/js-conf-notes/
