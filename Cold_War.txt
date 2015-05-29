@@ -1,0 +1,33 @@
+Cold War
+
+4:15pm Track A (Wednesday)
+
+Game loop
+
+function tick() {
+	update();
+	paint();
+	window.requestAnimationFrame(tick);
+}
+tick();
+
+paint() {
+	clearScreen();
+}
+
+use canvas
+
+cold war simulation
+
+simonswain/coldwar
+
+
+
+
+
+
+
+
+
+
+

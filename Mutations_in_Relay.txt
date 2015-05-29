@@ -1,0 +1,79 @@
+Mutations in Relay
+
+2:15pm (Wednesday)
+
+
+React + Flux -
+
+What's the best way to fetch data?
+
+Data needs are passed up the component tree.
+If you change something you would need to change all the way up the tree and the server itself.
+
+Data fetching logic on server and rendering logic on client (?).
+
+Putting the data fetching logic and rendering logic in the same place is the core of Relay. (In the component)
+
+Component [Query, Render]
+Less likely to get under-fetching and over-fetching.
+
+GraphQL - used to describe data needs.
+
+{ id, name, profile_picture { uri, width, height } }
+
+Generate the graphQL query based on the component tree (composed of children queries).
+Relay uses the generated query and puts the data in a central store. (Single Store)
+
+{ author { name, url }, body { text, sticker } }
+
+User writes: mutations in relay.
+
+Old method:
+custom js ----> custom endpoint -----> custom data format ---> custom js
+
+Client -----> Structured Write API -----> ? (ID or boolean) -----> Client
+	Updated client -> guess? second round trip?
+
+type: story_like
+
+format: {}
+
+what can change story: { does_viewer_like, like_sentence, likers, }
+what we've stored story: { can_viewer_like, does_viewer_like, likers {} }
+
+result { does_viewer_like, likers { } }
+
+figure out what to update
+
+1) action
+2) Name + inputs
+3) relay
+4) server query + inputs
+5) updated props
+
+Relay supports optimistic mutations - view changes before server reports success.
+{ story_id: ..., does_viewer_like: true, likers: { count: store.likers.count + 1 } }
+
+relay maintains a queue of optimistic mutations when requesting data it checks the store, then checks the queue and can overwrite.
+
+errors can leave action in queue and still update the UI since we have an optimistic mutation.
+
+queue mutations go one by one to avoid race conditions (?)
+
+- Relay features still being worked on
+Subscriptions 
+
+Summary
+* We should keep our data fetching and rendering together.
+* Identify problematic patterns and fold them into Relay.
+
+
+
+
+
+
+
+
+
+
+

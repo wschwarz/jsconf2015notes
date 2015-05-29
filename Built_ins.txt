@@ -1,0 +1,53 @@
+Built ins
+
+Friday (2:15pm Track-B)
+
+@jdalton
+
+self-hosting: implementing parts or the whole of a language runtime in the language itself.
+
+what are built ins?
+i.e. forEach, every, ArrayIndexOf(searchElement, fromIndex)
+
+what is a shim? - A shim is a library that brings a new API to an older environment, using only the means of that environment.
+
+A polyfill is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively. Flattening the API landscape if you will.
+
+you can knit javascript and c together when developing.
+
+lodash - possible to get better then built-in performance (cutting features) add other features back-in and get better or equivalent perf.
+
+Intl - internationalization API, implemented in JS (Edge).
+	good
+		simplified handling arguments
+		simplified reading/understanding
+		integrating w/ C++ was simple
+	bad
+		extra js functionality is exposed
+		heavier boilerplate
+		js has weird side-effects that have to be corrected for. (i.e. changing Object.prototype, keeping references)
+	ugly
+		preventing tainting of internal JS
+		testing - (checking for the above is more difficult)
+		ensure correct stack behavior
+		you get leaks (you don't want to be able to see or modify your built-ins)
+
+No silver bullet on performance (alternatives(natives) can and are often still faster)
+Object.assign - ~60% faster than lib alternatives
+v8 - Object.assign is ~62% slower. Different implementations can vary.
+
+shakras? chakras? That's the win10 version that's super fast. Chakra (jscript engine) developed by microsoft for IE9. it JIT compiles on a seperate CPU than the browser
+
+jperf.com - indexof vs vanilla (javascript natives)
+
+developers shouldn't feel forced to use a lib to have faster built-in equivalents.
+
+
+
+
+
+
+
+
+
+

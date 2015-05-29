@@ -1,0 +1,35 @@
+Pebble Timeline
+
+Smart watches * e-ink
+
+pebble time - microphone
+
+it connects to your mobile device
+always-on screen
+new OS for your watch (pebble timeline)
+
+each event is a 'pin'. Pebble API (npm module)
+
+version controlled immutable deployment
+
+commit to deploy
+commit to alter infrastructure
+commit to change production environment variables
+repo encrypted to data store of your choice
+github.com/pebble/git-deploy
+
+immutable deployments - Containers
+
+logging stdio - stored in memory
+dangling image layers
+
+root inside a container == root on the host
+overestimate built-in security
+dropping privileges is vital
+
+systemd-nspawn
+CoreOS' rkt
+
+Redundancy, Resiliency, Scale
+
+

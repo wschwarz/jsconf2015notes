@@ -1,0 +1,24 @@
+Helping someone get up and running
+
+Friday (12:45pm - Track B)
+
+
+Good Readmes - README.md
+
+Command Line tools - (automatically generate a list to add to your readme or group place?)
+
+Comment - why your code is doing what it's doing.
+
+Vagrant - easy to script virtualized environment for development
+(hide the fact that you are using it.)
+
+Nag your users?
+
+How do you "test" the system? - Show them all the tools and test that it all works. (Dashboards, command-line args to shrink jobs or test edge-cases)
+
+The ultimate drama - something about a promo code - js2015?
+
+
+
+
+

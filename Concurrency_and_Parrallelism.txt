@@ -1,0 +1,46 @@
+Concurrency and Parrallelism
+
+5:00pm Track A (Wednesday)
+
+Coordination is a big issue.
+Web workers
+
+postMessage()
+	buffer
+
+Parallel JavaScript
+Casual API
+Warm-up costs
+Memory overhead of functional ()
+
+Design Criteria
+Not dependent on main thread event loop
+Support Extensible Web philosophy
+
+-- Shared Memory For Javascript --
+Example: The Incrementing Worker
+
+postMessage with new Worker - 54,245 / sec
+
+SharedInt32Array
+
+var sab = new SharedArrayBuffer(bufSize);
+var s = SynchronicInt32(sab, 0);
+
+w.postMessage([sab, 0, locIdx, iterations], [sab]);
+
+6,329,111
+
+ChannelReceiver
+ChannelSender
+MyPostMessage
+
+275,482
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+JSConf
+
+Automated Testing 10:15 am (Track B)
+
+Continuous Integration
+	consistent, easily repeatable.
+
+Servers are getting cheap.
+
+Headless testing helps
+	phantomjs
+	envjs
+	rhino
+	rubyracer
+	nodejs
+
+Problem - What if your tech can't run on one of these?
+	Some tech assume the presence of a GUI or web-browser
+
+Case Study - Google Polymer (web components)
+	web component tester assumes a GUI
+	cloud based cli doesn't have them
+
+Possible solutions
+	Travis CI - xvfb Firefox (good documentation)
+	Sauce Labs - Selenium cloud.
+
+Enter X Virtual Frame Buffer - xvfb
+	allows you to run GUI applications without a GUI
+	uses X11 windows server
+
+github.com/mdb/polymer-testing-box
+github.com/mdb/nw-testing-box
+	uses vagrant, ansible, bower and node
+
+run against the display port that xvfb is running on.
+(See if you can get this guys notes)
+
+Need to run some commands to run stuff on the spun up VM box.
+
+

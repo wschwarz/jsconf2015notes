@@ -1,0 +1,40 @@
+Hybrid apps in backbone react
+
+Friday (11am - Track B)
+
+chaplin
+backbone
+brunch
+
+brunch is a build tool
+chaplin has mediator (pub/sub) for between app communication
+
+Big question: What could UI solve on its own?
+	eliminate rerendering
+	numerous api calls & hydrations
+
+Solution: replacing backbone views with React
+
+Migration Process
+start with small components
+use backbone/react mixin
+
+convert your parent view to use React.createElement instead. This ties them together.
+
+React Backbone Adapter. Pass in element, container, callback.
+1) create, 2) identify, 3) attach, 4) render, 5) dispose
+
+use a wrapper. root level react component extend the adapter
+
+multiple models and collections as props
+
+cjsx - coffeescript
+babel is much more robust
+
+implicit returns - remember to wrap a series of components in a parent div, otherwise it won't render
+
+cjsx - event handlers will need to 'return false', otherwise react will screw up
+
+github.com/jhudson8/react-backbone
+
+

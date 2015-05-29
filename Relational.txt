@@ -1,0 +1,35 @@
+JSConf
+
+Making Relational Cool Again - Track A 11:00am
+
+Javascript on ACID
+
+SQL - JS
+Lots of differences
+Similarities?
+"Languages that will probably never die."
+
+Node started with a lot of support for nosql
+
+Problem: No set of DBAPI
+Lack of transaction API,
+Database specific stuff
+
+KNEX.JS and Bookshelf.js
+
+SQL as you would write it. knex.select('*').from('table').where({ field: 1}).then().catch();
+
+Transactions
+Snapshot state, ability to rollback, provent others from altering data as you're working with it. Tricky in Node.
+
+Bookshelf - ORM
+built on top of knex.
+
+OpenRecord
+
+Sequelize
+
+Yeah Reinvent the wheel - Conversations after React are different. Different approach to some of this stuff
+
+get something in node that is === SQLAlchemy
+

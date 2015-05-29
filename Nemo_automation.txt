@@ -1,0 +1,122 @@
+Nema - natural NodeJS automation
+
+Friday (4:15pm - Track B)
+
+Java => nodejs
+
+transform paypal tech - build product faster in node than java for prototyping
+
+still writing the automation tests in Java
+
+side effects get introduced (even great devs make mistakes or problems show up in code)
+
+selenium
+webdriver <-JSON wire protocol -> intermediary <-> targets (browser)
+
+we're going to be on the left-side with the language bindings (webdriver side)
+	starts server
+	sets capabilites
+	webdriver api
+	this is where nemo hangs out.
+
+Nemo
+	gives you tools for configuring
+	registers plugins
+	abstracts capabilites
+
+nemo view plugin
+
+on top of that we have mocha (or some test runner)
+on top of that use a task runner (gulp, grunt, broccoli)
+
+need all of this for full automation
+
+basic javascript selenium-webdriver script => into nemo require('nemo'), nemo.get('http://www.paypal.com')
+
+load JSON config (confit)
+start webdriver
+initialize plugins
+provide access to API
+	nemo.driver, nemo.wd
+
+github.com/krakenjs/confit
+	NODE_ENV override (by setting the env you can change the config values)
+	shortstop handlers | values in JSON ex. env:foo (you can override base values with argv)
+
+basic config | driver, plugins, data
+
+"username": "env:username"
+
+example in nemo repo by default
+run this and it opens firefox (or other)
+argv takes precedence over env value
+
+plugins: (looks like a module)
+	webdriver abstractions
+	user ineteractions
+	proprietary functionality
+
+Example adds something to the nemo namespace ex: nemo.login = function() {}
+"plugins": { "login": { "arguments": ["path:locator"]}}
+
+nemo.driver.get()
+nemo.login()
+...
+
+custom plugin to change this behavior
+	nemo.driver.findElement(...).click()
+	vs
+	nemo.view._find('#addalink').click();
+	vs
+	nemo.view.nav.bank().click();
+
+nemo.view provides generic methods to quickly and simply start testing (nemo.view._find, nemo.view._waitVisible...)
+
+defines functions for dynamic objects passed in from configs
+bank.numberWaitVisible()
+
+script user actions on a page. (Mocha runner on webstorm).
+locaters in a shareable location loaded in JSON(locater file) via config (locaters are like jQuery selectors).
+
+https://github.com/paypal/nemo
+
+Group similar functionality into modules - create "flow" files.
+
+3 passes through
+
+https://github.com/paypal/nemo-example-app
+
+reminder
+you don't have to use nemo-view, mocha or grunt. That's just his take on the best way to use it.
+
+contributors
+generator-nemo
+gulp examples
+appium/ios-driver/selendroid examples
+
+@nemojs_news
+nemo.js.org
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

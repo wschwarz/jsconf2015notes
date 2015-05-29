@@ -1,0 +1,149 @@
+Async Programming in ES7
+
+Track A - 12:45pm (Wednesday)
+
+ES2015, ES2016
+
+Netflix 'Falcor'
+
+How do we make 'async' easier?
+
+arrow functions:
+x => x + 1
+(x, y) => x + y
+
+no callbacks?
+
+Blocking means Pulling
+data delivered in return position
+What if we wait instead of block?
+
+Waiting means Pushing
+getStockPrice("Denim Inc", (error, price) => ())
+
+no error support during waiting. Waiting is more painful.
+
+Syntatic support for this type of stuff.
+
+Promises:
+promise.then(value => {}, error => {});
+
+Improvement but we want waiting to look like blocking.
+
+He's been talking about generators.
+
+Pulling and Pushing are symmetrical
+
+Generator function:
+a function that can return multiple values
+function* getNumbers() {
+	yield 42;
+	yield 32;
+	return 19;
+}
+
+var iterator = getNumbers();
+console.log(iterator.next());
+{ value: 42, done: false }
+console.log(iterator.next());
+{ value: 32, done: false }
+console.log(iterator.next());
+{ value: 19; done: true }
+
+Iteration pattern:
+Consumer / Producer
+
+Consumer pulls a value out of a producer ie. iterator.next() until producer says I'm done.
+
+A generator is an observer you can push values into a generator
+generator.next(5);
+
+Iteration only allows information to flow in one direction.
+Generators allows two way information flow.
+
+generator -> pull the promise out resolve the promise then push the value back in.
+
+spawn function inside task.js
+
+async functions will be built into ES2016
+in ES 2016 looks like
+async function() {
+	var x = await function();
+}
+
+ES Feature Maturity Stage
+0. strawman
+1. proposal
+2. draft
+3. candidate
+4. finalize
+
+in ES6 all collections are Iterable.
+var iterator = [42,39,17][Symbol.iterator](),
+	pair;
+
+for (var x of [42, 19, 32]) {
+	console.log(x);
+}
+
+
+waiting on values with for...on (proposed feature)
+async function getNextPrice() {
+	for (var price on new WebSocket()) {
+
+	}
+}
+
+The web has no standard Observable interface.
+
+interface Iterable {
+	Generator iterator(void);
+}
+
+interface Observable {
+	void observer(Generator);
+}
+
+in observation the producer is controlling you. It's like the producer is iterating over you.
+
+The producer hands it to the consumer
+producer.observer(observer);
+observer.next(42);
+observer.next(39);
+observer.return;
+
+nums().observer({
+	next(v) { console.log(v); }
+	return (v);
+)
+
+we can add sugar to observation
+
+
+All the push APIs on the web could in the future implement Observable.
+
+async function return a promise
+function* returns a generator
+
+what does async function* return?
+
+async function* pushes multiple values - could return an observable.
+
+symmetrical support for functions that return multiple functions
+
+This is in the strawman phase. (needs feedback)
+
+github jhusain/asyncgenerator
+
+
+
+
+
+
+
+
+
+
+
+
+

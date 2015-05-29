@@ -1,0 +1,110 @@
+End to End Testing Automation
+
+Friday (3:00pm - Track B)
+
+The Troll README - Leave out the important details
+
+@WalmartLabs
+
+The test pyramind ui -> service -> unit
+
+unit: fast, reliable, predictable
+service: not talk about but hit http endpoints
+ui: end-to-end tests, (thought to be slower, brittle, hard to maintain, necessary because there are going to be gaps in the unit tests)
+
+end-to-end test:
+	should be cross-browser (figure out which ones you need to support)
+
+look at the commits for the last 3 weeks and find the bug that caused a regression in a legacy browser.
+
+automate it!
+
+pretty much all of them rely on selenium at its core.
+	deep hooks for every browser.
+	http api
+	usually use companion tools and wrappers i.e. Sauce Labs, Browser stack
+
+everybody who starts down this path ends up with test flake(n) -
+	when your tests sometimes fail for no good reason, creating false positive results
+	(see also: waste everyone's time with this one weird trick that developers hate)
+
+(TTL podcast - front-end ops)
+
+Google Testing Blog - Just say No to More End-to-End Tests
+
+End-to-End tests - slow, flakey, don't isolate failures
+
+Goals:
+	1) Dev & QA
+	2) Fast (fast enough for CI)
+	3) No flake! (no tolerance for false positives)
+
+Companion library - Nightwatch.js browser automated testing for js(?) - Combined with SauceLabs
+
+Very quickly 80/20 rule. Same problems with flakiness.
+
+Think of end-to-end tests as unit tests but they're very different.
+
+Soup metaphor
+	Unit Test - Grabbing a can of soup from your own house.
+	End-To-End Tests - Get in your car, drive through a zombie apocalypse, get to the grocery store (with zombies), get home
+
+Lurking Zombies
+	1) Buggy webdrivers
+	2) Flakey Network - everything is running over http (sometimes remotely).
+	3) Service bugs/outages
+	???
+
+This is a losing battle.
+
+-----What if------ we could make the tests not flakey without fixing them.
+
+axiom(n) - a starting point of reasoning, so evident it's accepted as true.
+
+Dirty approach. Examples -
+1) If an assertion fails, try again (a couple more times...)
+2) click events - inject jQuery into the page and trigger jQuery click events instead of buggy webdrivers.
+
+Smoothing over bumps in non-optimal ways but it was working.
+Result: Instead of getting in your car get in an armored convery (overkill, computationally expensive) but it fixes reliability problem.
+
+Open Source(?) - Not proud of what's going on here.
+
+How many people give up because they couldn't find an elegant, clean solution?
+
+1 hour window for test failures. Small window.
+
+Implemented massively parallel test runner (50 at once). Need independent test with no dependencies. Now added as part of a pull request.
+
+Historic data - now we can get % of runs requiring a retry, by client. Gives a narrower window for investigation.
+(Slice by test names themselves). This is just looking at retry rate.
+
+They want to opensource this:
+CodeName - Magellan (probably will change)
+Not a replacement for nightwatch etc. More like a conductor for your orchestra. Gives you reporting, massively parallel, runs.
+
+Shit Shoveling 101
+1) Momentum > Perfection
+2) Smoothing Over > Giving Up
+3) Useful > Precise
+4) Open Source > Closed Source
+
+@geek_dave
+#SSaaS
+ttlpodcast.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

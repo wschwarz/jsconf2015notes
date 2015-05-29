@@ -1,0 +1,36 @@
+node bots demo
+
+Friday (1:30pm - Track B)
+
+Book - Make: JavaScript Robotics: Building NodeBots with Johnny-Five, Rasberry Pi, Arduino, and BeagleBone
+
+bocoup blog post that covers how to build the nodebot
+
+Onion Omega - $9 computer, wifi-enabled
+
+johnny-five
+
+npm noble
+
+lightblue bean
+
+robotnik
+
+nodebots day July 25th
+
+nodebots live - podcast (on patreon) - check on their twitter
+
+esperino pico
+
+
+
+
+
+
+
+
+
+
+
+
+

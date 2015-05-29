@@ -1,0 +1,94 @@
+Javascript CSS
+
+1:30pm Track A (Wednesday)
+
+Ideas not code
+
+Css has many limitations
+* no constants or variables
+* no extension
+* bad dependency management
+* no way to re-use
+* no interopability with js
+
+Preprocessors work around some of these limitations
+but preprocessors are weird:
+* ambiguous syntax
+* non-standard semantics
+* almost a real language
+
+preprocessors are compiled but that doesn't always mean something good happened.
+no compile time error sometimes.
+
+variables: less and sass have different results from the same code.
+
+less: has white-space sensitive math.
+margin: 10px - 2px /* margin: 8px */
+margin: 10px -2px /* margin: 10px -2px */
+
+Language design is hard
+
+can JS do CSS better?
+
+.button {
+	color: red;
+}
+in js
+var styles = {
+	".button": { color: "red",
+	}
+}
+
+var styles={
+	".button": {
+		color: "red",
+		"> .icon": {}
+	}
+}
+property fallbacks with arrays
+all the complicated stuff in "" and object properties.
+We just use literal expressions.
+
+- How to use in a browser
+> toCSS(styles)
+".button { color: red; }"
+
+why are we doing this?
+
+Take over the browser: Use javascript to apply styles
+
+prereq: css ast (abstract syntax tree)
+var parse = require('css-parse');
+parse(".button { color: red; }");
+the reverse
+var stringify = require('css-stringify');
+
+@supports (display: flex) {
+	div { display: flex;}
+}
+
+@supports not (display: flex) {
+}
+
+check browser capabilities and feed new parsed css back into the browser.
+
+rules.forEach(function(rule) {
+	var elements = document.querySelectorAll(rule.selector);
+	elements.forEach(function(element) {
+		element.style = rule.style;
+	});
+})
+
+
+Flexbox polyfill - we can calculate stuff
+
+
+
+
+
+
+
+
+
+
+

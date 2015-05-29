@@ -1,0 +1,46 @@
+Recipes Search
+
+Friday (9:30am - Track A)
+
+
+Current recipe search apis
+BigOven
+Yummly
+Food2Fork
+Edamam
+
+Graph analysis and computer vision to find un-attributed artworks
+
+neo4j - graph database
+
+Graph Theory
+
+nodes store properties as key-value pairs
+neo4j supports relationship properties (uncommon)
+
+relationships have a direction.
+
+CYPHER is a query language in 4j
+-[recipe]->[:contains]->[recipe:contains]
+
+(recipe)-[:contains]->(ingredient)
+(node)
+
+complete graph cycles
+
+finding a collection of digitized recipes
+used api's compared to web scraping
+
+weighting recipes and context (i.e. dinner)
+
+github.com/hackygolucky/recipe-modeling
+
+Take bigger swings to fail more
+
+
+
+
+
+
+
+

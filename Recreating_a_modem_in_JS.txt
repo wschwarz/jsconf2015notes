@@ -1,0 +1,35 @@
+Recreating a modem in JS
+
+Friday (10:15am Track-A)
+
+waveform + 01011
+encoding problem
+
+audible multiplexing - focus on one frequency and ignore everything else
+
+FSK - frequency shift key. This allows us to encode state.
+
+carrier signal, modulating sin wave signal, frequency modulating
+
+AFSK -
+
+TTY - teletype
+non-skilled operators on both ends reading encoded messages.
+
+string to bytes, bits to audio by encoding in waveform by shifting frequency.
+
+baud rate - bits/second
+
+extracting bits from the waveform. These set of bins equates to a bit.
+
+need frequency
+Goertzel - allows us to extract a (single) target frequency intentsity over time
+analyzing the intensity isn't perfect but we want as close to binary as we can get.
+
+use hamming window to remove noise (fourier transform).
+
+Those high tones are our lead in to denote starting stop.
+
+github.com/samccone/noise
+
+
