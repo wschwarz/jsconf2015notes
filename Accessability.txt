@@ -1,0 +1,16 @@
+Accessability
+
+Wednesday (9:30 am - Track A)
+
+UAI - ARIA - Use semantic and landmarks
+
+Watch out for seizures, color blindness.
+
+Make sure to support keyboard only use and keyboard use in general
+
+Watch out for AJAX calls and how they notify the user (in case of screen readers etc.)
+
+Be careful about focus styling and js.
+
+Skip navigation using font-size, contrast, skip to content links
+
